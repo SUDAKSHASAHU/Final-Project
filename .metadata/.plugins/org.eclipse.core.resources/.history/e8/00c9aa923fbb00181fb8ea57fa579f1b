@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ include file="header.jsp"%>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container">
+
+
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      
+
+         <span style="color:red">${error } </span><br>
+<span style="color:green">${msg }</span>
+<br>
+
+<c:url value='/j_spring_security_check' var="url"></c:url>
+      <form action="${url }" method="post">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" align="center"><strong>WELCOME TO OUR LOGIN PAGE</strong></h4>
+      </div>
+      </br>
+      
+      <div class="modal-body">
+      
+       <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-sunglasses"></i></span>
+    <input id="email" type="text" class="form-control" name="j_username" placeholder="Email">
+  	</div>
+  	</br></br>
+  	<div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></span>
+    <input id="password" type="password" class="form-control" name="j_password" placeholder="Password">
+  	</div>
+      </div>
+      </br>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-default" data-dismiss="modal" value="Login">SUBMIT</button>
+      </div>
+      </form>
+    </div>
+      
+    </div>
+  </div>
+  </div>
+
+
+
+
+	
+</body>
+</html>
